@@ -1,0 +1,12 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/php:latest
+    branches:
+      only:
+        - DEV
+    steps:
+      - run :
+	name : test when DEV
+	command : './app/testdeploy/deploy.sh'
