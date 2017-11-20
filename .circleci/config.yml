@@ -7,4 +7,4 @@ jobs:
       only:
         - DEV
     steps:
-      - run : ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no titbserverteam@107.167.190.53 "cd /app/testdeploy/ && bash ./deploy.sh"
+      - run : ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  "cd /app/testdeploy/ && bash ./deploy.sh"
