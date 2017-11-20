@@ -7,6 +7,4 @@ jobs:
       only:
         - DEV
     steps:
-      - run :
-	name : test when DEV
-	command : './app/testdeploy/deploy.sh'
+      - run : ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no titbserverteam@107.167.190.53 "cd /app/testdeploy/ && bash ./deploy.sh"
